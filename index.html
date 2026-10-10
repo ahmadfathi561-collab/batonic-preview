@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batonic Preview - Professional Business Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        batonic: {
+                            50: '#f4f6ff',
+                            100: '#eaeefa',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            900: '#0f172a',
+                            950: '#020617'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .light .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-batonic-950 text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white transition-colors duration-300">
+
+    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-cube text-white text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-200 to-indigo-400 bg-clip-text text-transparent">BATONIC</span>
+                    <span class="block text-[10px] text-indigo-400 font-semibold tracking-widest uppercase">Unpublished Preview</span>
+                </div>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#overview" class="text-slate-300 hover:text-white transition">Overview</a>
+                <a href="#pages" class="text-slate-300 hover:text-white transition">Included Pages</a>
+                <a href="#scope" class="text-slate-300 hover:text-white transition">Scope & Handoff</a>
+                <a href="#pricing" class="text-slate-300 hover:text-white transition">Pricing & Extras</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleTheme()" class="w-10 h-10 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-white transition">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                </button>
+                <button onclick="openModal('Custom Enterprise Tier')" class="hidden sm:inline-flex items-center space-x-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition transform hover:-translate-y-0.5">
+                    <span>Claim Preview</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="overview" class="relative pt-16 pb-24 overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+                    <span>Batonic Exclusive Preview • Tier 1: Business Site</span>
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                    High-End Digital Presence, <span class="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">Zero Guesswork.</span>
+                </h1>
+                <p class="text-lg text-slate-300 mb-8 leading-relaxed">
+                    Compare this exact preview, predefined scope, revision limits, and launch handoff before discussing custom extras. Designed specifically for modern businesses ready to scale.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <button onclick="scrollToSection('pages')" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-base shadow-xl shadow-indigo-600/30 transition flex items-center justify-center space-x-3">
+                        <i class="fa-solid fa-eye"></i>
+                        <span>Explore Live Screens</span>
+                    </button>
+                    <button onclick="openModal('Business Site Standard Package')" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 border border-slate-700 hover:bg-slate-800 text-white font-bold text-base transition flex items-center justify-center space-x-3">
+                        <i class="fa-solid fa-file-contract text-indigo-400"></i>
+                        <span>Review Exact Scope</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Live Preview Mockup Card -->
+            <div class="mt-16 glass-panel rounded-3xl p-4 sm:p-8 shadow-2xl relative border border-slate-800">
+                <div class="flex items-center justify-between pb-6 border-b border-slate-800 mb-6">
+                    <div class="flex items-center space-x-2">
+                        <div class="w-3 h-3 rounded-full bg-rose-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-amber-500"></div>
+                        <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                        <span class="ml-4 text-xs font-mono text-slate-400">https://preview.batonic.io/business-tier</span>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-medium">Live Interactive Wireframe</span>
+                </div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-indigo-400 text-xs font-bold uppercase tracking-wider mb-2">Included Pages</div>
+                        <h3 class="text-xl font-bold text-white mb-4">4 Core Business Screens</h3>
+                        <ul class="space-y-3 text-sm text-slate-300">
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Home (Hero, Stats, Testimonials)</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>About Us (Mission & Vision)</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Services (Interactive Cards)</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Contact Us (Form & Map integration)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-indigo-400 text-xs font-bold uppercase tracking-wider mb-2">Revision Limits</div>
+                        <h3 class="text-xl font-bold text-white mb-4">2 Structured Rounds</h3>
+                        <p class="text-sm text-slate-300 mb-4">Controlled workflow to guarantee speed and flawless delivery without endless delays.</p>
+                        <div class="p-3 bg-indigo-950/50 rounded-xl border border-indigo-900/50 text-xs text-indigo-300">
+                            Round 1: Visuals & Branding<br>Round 2: Copy & Final Polish
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                        <div class="text-indigo-400 text-xs font-bold uppercase tracking-wider mb-2">Launch Handoff</div>
+                        <h3 class="text-xl font-bold text-white mb-4">Seamless Deployment</h3>
+                        <p class="text-sm text-slate-300 mb-4">Choose between clean source code handover or direct deployment on your server.</p>
+                        <button onclick="openModal('Business Site Standard Package')" class="w-full py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition">
+                            Select This Package ($1,450)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pages" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Included Pages Preview</h2>
+                <p class="text-slate-400">Click through the tabs below to preview the exact sample screens built into the Batonic Business Tier.</p>
+            </div>
+
+            <!-- Page Tab Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-10">
+                <button onclick="switchTab('home')" id="btn-home" class="px-6 py-3 rounded-xl font-semibold text-sm transition bg-indigo-600 text-white shadow-lg shadow-indigo-600/30">
+                    <i class="fa-solid fa-house mr-2"></i> Home Screen
+                </button>
+                <button onclick="switchTab('about')" id="btn-about" class="px-6 py-3 rounded-xl font-semibold text-sm transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-building mr-2"></i> About Us
+                </button>
+                <button onclick="switchTab('services')" id="btn-services" class="px-6 py-3 rounded-xl font-semibold text-sm transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-briefcase mr-2"></i> Services
+                </button>
+                <button onclick="switchTab('contact')" id="btn-contact" class="px-6 py-3 rounded-xl font-semibold text-sm transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white">
+                    <i class="fa-solid fa-envelope mr-2"></i> Contact Us
+                </button>
+            </div>
+
+            <!-- Tab Content Containers -->
+            <div class="glass-panel rounded-3xl p-6 sm:p-10 border border-slate-800 min-h-[450px] transition-all">
+                
+                <!-- Home Screen Tab -->
+                <div id="tab-home" class="space-y-8 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="max-w-xl">
+                            <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Sample Screen 01</span>
+                            <h3 class="text-3xl font-bold text-white mt-2 mb-4">High-Conversion Homepage</h3>
+                            <p class="text-slate-300 mb-6">Designed to capture attention in seconds. Features an impactful Hero section, live metrics counter, trust badges, and prominent Call-to-Action buttons.</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg text-xs font-semibold">Responsive Layout</span>
+                                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 rounded-lg text-xs font-semibold">Tailwind v3</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl">
+                            <div class="h-40 rounded-xl bg-gradient-to-br from-indigo-900/40 to-slate-900 flex items-center justify-center border border-indigo-500/20 mb-4">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-chart-line text-3xl text-indigo-400 mb-2"></i>
+                                    <div class="text-sm font-bold text-white">Interactive Hero Preview</div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="p-3 bg-slate-900 rounded-xl text-center">
+                                    <div class="text-lg font-bold text-indigo-400">99.9%</div>
+                                    <div class="text-[10px] text-slate-400">Uptime Metric</div>
+                                </div>
+                                <div class="p-3 bg-slate-900 rounded-xl text-center">
+                                    <div class="text-lg font-bold text-indigo-400">24/7</div>
+                                    <div class="text-[10px] text-slate-400">Client Support</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Us Tab -->
+                <div id="tab-about" class="hidden space-y-8 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="max-w-xl">
+                            <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Sample Screen 02</span>
+                            <h3 class="text-3xl font-bold text-white mt-2 mb-4">About Us & Brand Story</h3>
+                            <p class="text-slate-300 mb-6">Build instant credibility with prospective clients by showcasing your company's mission, vision, leadership team, and corporate milestones.</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg text-xs font-semibold">Team Profiles</span>
+                                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 rounded-lg text-xs font-semibold">Timeline Layout</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl">
+                            <div class="space-y-4">
+                                <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 flex items-center space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-600/20 flex items-center justify-center text-indigo-400 font-bold">01</div>
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Our Vision & Core Mission</div>
+                                        <div class="text-xs text-slate-400">Empowering digital innovation globally.</div>
+                                    </div>
+                                </div>
+                                <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 flex items-center space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-600/20 flex items-center justify-center text-indigo-400 font-bold">02</div>
+                                    <div>
+                                        <div class="text-sm font-bold text-white">Expert Leadership Team</div>
+                                        <div class="text-xs text-slate-400">Experienced professionals at your service.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Services Tab -->
+                <div id="tab-services" class="hidden space-y-8 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="max-w-xl">
+                            <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Sample Screen 03</span>
+                            <h3 class="text-3xl font-bold text-white mt-2 mb-4">Interactive Services Showcase</h3>
+                            <p class="text-slate-300 mb-6">Display what your business offers in clear, beautifully formatted cards with hover effects, icon highlights, and direct inquiry triggers.</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg text-xs font-semibold">Grid Cards</span>
+                                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 rounded-lg text-xs font-semibold">Hover Effects</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                                <i class="fa-solid fa-code text-indigo-400 text-xl mb-2"></i>
+                                <div class="text-xs font-bold text-white">Web Dev</div>
+                            </div>
+                            <div class="p-4 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                                <i class="fa-solid fa-bullhorn text-indigo-400 text-xl mb-2"></i>
+                                <div class="text-xs font-bold text-white">Digital Mkt</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Us Tab -->
+                <div id="tab-contact" class="hidden space-y-8 animate-fadeIn">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div class="max-w-xl">
+                            <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Sample Screen 04</span>
+                            <h3 class="text-3xl font-bold text-white mt-2 mb-4">Conversion-Ready Contact Page</h3>
+                            <p class="text-slate-300 mb-6">Features an integrated lead capture form, direct contact info, social links, and an interactive location map placeholder.</p>
+                            <div class="flex items-center space-x-4">
+                                <span class="px-3 py-1 bg-emerald-500/10 text-emerald-400 rounded-lg text-xs font-semibold">Lead Form</span>
+                                <span class="px-3 py-1 bg-indigo-500/10 text-indigo-400 rounded-lg text-xs font-semibold">Fast Response CTA</span>
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2 bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl space-y-3">
+                            <div class="h-9 bg-slate-900 rounded-lg border border-slate-800 px-3 flex items-center text-xs text-slate-500">Full Name...</div>
+                            <div class="h-9 bg-slate-900 rounded-lg border border-slate-800 px-3 flex items-center text-xs text-slate-500">Business Email...</div>
+                            <div class="h-20 bg-slate-900 rounded-lg border border-slate-800 p-3 text-xs text-slate-500">Your message...</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="scope" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Scope, Revision Limits & Handoff</h2>
+                <p class="text-slate-400">Transparency is key at Batonic. Know exactly what's included before you commit.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Revision Limits Card -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 text-indigo-500/10 text-6xl font-extrabold">01</div>
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Revision Limits & Workflow</h3>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        To maintain efficiency and guarantee fast delivery, the Batonic Business preview includes two structured review rounds:
+                    </p>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Round 1: Visuals & Branding</strong>
+                                <span class="text-slate-400 text-xs">Review color palette, typography, layout structure, and overall aesthetic.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-circle-check text-indigo-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Round 2: Copy & Final Polish</strong>
+                                <span class="text-slate-400 text-xs">Final adjustments to textual content, links, contact form endpoints, and responsive check.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="p-4 bg-amber-500/10 border border-amber-500/20 rounded-2xl text-amber-300 text-xs">
+                        <i class="fa-solid fa-triangle-exclamation mr-2"></i> Additional custom revisions beyond the 2 standard rounds are billed hourly or via custom add-on.
+                    </div>
+                </div>
+
+                <!-- Launch Handoff Card -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-8 text-indigo-500/10 text-6xl font-extrabold">02</div>
+                    <div class="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Launch Handoff Options</h3>
+                    <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Once you approve the final preview, we ensure a frictionless handover so your site goes live immediately without technical friction:
+                    </p>
+                    <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-code-merge text-indigo-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Clean Source Code Handover</strong>
+                                <span class="text-slate-400 text-xs">Fully commented HTML, Tailwind CSS, and JS files delivered directly to your GitHub or zip.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-server text-indigo-400 mt-1"></i>
+                            <div>
+                                <strong class="text-white block">Direct Server Deployment</strong>
+                                <span class="text-slate-400 text-xs">We deploy the site directly to your domain and hosting with a walkthrough guide.</span>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="p-4 bg-indigo-500/10 border border-indigo-500/20 rounded-2xl text-indigo-300 text-xs">
+                        <i class="fa-solid fa-circle-info mr-2"></i> Includes a 30-day bug warranty and free documentation.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-20 bg-slate-900/40 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Pricing & Custom Extras</h2>
+                <p class="text-slate-400">Compare the preview tier with potential custom add-ons before kicking off your project.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                <!-- Base Tier -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-mono text-indigo-400 uppercase tracking-widest mb-2">Standard Tier</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Business Site Preview</h3>
+                        <p class="text-slate-400 text-sm mb-6">The exact preview package shown above.</p>
+                        <div class="text-4xl font-extrabold text-white mb-6">$1,450 <span class="text-xs font-normal text-slate-400">/ project</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>4 Core Pages (Home, About, Services, Contact)</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>2 Main Revision Rounds</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Source Code or Server Deployment</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Fully Responsive Tailwind Design</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Business Site Standard Package')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition">
+                        Select Preview Package
+                    </button>
+                </div>
+
+                <!-- Recommended Custom Tier -->
+                <div class="glass-panel rounded-3xl p-8 border-2 border-indigo-500 relative flex flex-col justify-between shadow-2xl shadow-indigo-600/20 bg-gradient-to-b from-indigo-950/40 to-slate-900/80">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-indigo-600 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
+                        Most Popular for Growth
+                    </div>
+                    <div>
+                        <div class="text-xs font-mono text-indigo-400 uppercase tracking-widest mb-2">Enhanced Tier</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Business + Custom Extras</h3>
+                        <p class="text-slate-300 text-sm mb-6">Standard package plus advanced bespoke integrations.</p>
+                        <div class="text-4xl font-extrabold text-white mb-6">$2,250 <span class="text-xs font-normal text-slate-400">/ project</span></div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-8">
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Everything in Standard Business Tier</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Custom CMS / Blog Integration</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Advanced Animation & Micro-Interactions</span></li>
+                            <li class="flex items-center space-x-3"><i class="fa-solid fa-check text-emerald-400"></i><span>Priority 24-Hour Handoff Support</span></li>
+                        </ul>
+                    </div>
+                    <button onclick="openModal('Enhanced Business + Extras')" class="w-full py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition">
+                        Claim Enhanced Package
+                    </button>
+                </div>
+
+                <!-- Custom Extras Add-ons Card -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="text-xs font-mono text-indigo-400 uppercase tracking-widest mb-2">À La Carte</div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Custom Extras Menu</h3>
+                        <p class="text-slate-400 text-sm mb-6">Add specific modules to any Batonic tier.</p>
+                        <div class="space-y-4 mb-8 text-sm">
+                            <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                                <span class="text-slate-300">Extra Page Addition</span>
+                                <span class="font-bold text-indigo-400">+$200 / page</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                                <span class="text-slate-300">Multilingual (AR/EN)</span>
+                                <span class="font-bold text-indigo-400">+$350</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-slate-800">
+                                <span class="text-slate-300">Custom Admin Dashboard</span>
+                                <span class="font-bold text-indigo-400">+$800</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="openModal('Custom Extras Inquiry')" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-sm transition">
+                        Request Custom Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-slate-800/80 bg-slate-950 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold">B</div>
+                <span class="font-bold text-white">Batonic Digital Agency</span>
+            </div>
+            <div>© 2026 Batonic Team. Unpublished Preview Environment. All rights reserved.</div>
+            <div class="flex space-x-4 text-slate-400">
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <div id="requestModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+        <div class="glass-panel w-full max-w-lg rounded-3xl p-8 border border-slate-800 shadow-2xl relative transform scale-95 transition-transform duration-300" id="modalContainer">
+            <button onclick="closeModal()" class="absolute top-6 right-6 w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:text-white transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="mb-6">
+                <span class="text-xs font-mono text-indigo-400 uppercase tracking-widest">Batonic Client Onboarding</span>
+                <h3 id="modalTitle" class="text-2xl font-bold text-white mt-1">Claim Preview Package</h3>
+                <p class="text-slate-400 text-sm mt-1">Fill out your details below and our team will initiate your project setup.</p>
+            </div>
+            <form id="claimForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Your Name / Company</label>
+                    <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-indigo-500" placeholder="e.g., Ahmed & Batonic Partners">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Business Email</label>
+                    <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-indigo-500" placeholder="name@company.com">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Selected Package / Custom Notes</label>
+                    <input type="text" id="modalPackageInput" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-indigo-300 text-sm focus:outline-none focus:border-indigo-500" readonly>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-lg shadow-indigo-600/30 transition">
+                    Confirm & Start Project
+                </button>
+            </form>
+            <div id="successMessage" class="hidden text-center py-8 space-y-4">
+                <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center text-3xl">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h4 class="text-xl font-bold text-white">Preview Claimed Successfully!</h4>
+                <p class="text-slate-300 text-sm">We have received your request for the Batonic preview package. Our technical lead will reach out within 2 hours.</p>
+                <button onclick="closeModal()" class="px-6 py-2.5 rounded-xl bg-slate-800 text-white text-xs font-semibold">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        }
+
+        // Tab Switching for Included Pages
+        function switchTab(tabName) {
+            const tabs = ['home', 'about', 'services', 'contact'];
+            tabs.forEach(t => {
+                const el = document.getElementById('tab-' + t);
+                const btn = document.getElementById('btn-' + t);
+                if (t === tabName) {
+                    el.classList.remove('hidden');
+                    btn.className = "px-6 py-3 rounded-xl font-semibold text-sm transition bg-indigo-600 text-white shadow-lg shadow-indigo-600/30";
+                } else {
+                    el.classList.add('hidden');
+                    btn.className = "px-6 py-3 rounded-xl font-semibold text-sm transition bg-slate-900 border border-slate-800 text-slate-300 hover:text-white";
+                }
+            });
+        }
+
+        // Modal Controls
+        function openModal(packageName) {
+            const modal = document.getElementById('requestModal');
+            const container = document.getElementById('modalContainer');
+            const input = document.getElementById('modalPackageInput');
+            input.value = packageName;
+            document.getElementById('claimForm').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+            
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                container.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('requestModal');
+            const container = document.getElementById('modalContainer');
+            modal.classList.add('opacity-0');
+            container.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            document.getElementById('claimForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
